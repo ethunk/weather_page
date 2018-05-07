@@ -1,6 +1,6 @@
 source 'https://rubygems.org/'
 
-gem 'rails', '5.1.5'
+gem 'rails', '~> 5.1.4'
 gem 'railties'
 gem 'pg'
 gem 'puma'
@@ -8,9 +8,11 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'devise'
 gem 'kaminari'
-gem 'foundation-rails', '~> 5.0'
+gem 'foundation-rails'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'activerecord'
+
 group :development do
   gem 'listen'
   gem 'web-console'
@@ -28,7 +30,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'shoulda'
   gem 'faker'
-  gem 'quiet_assets'
   gem 'valid_attribute'
   gem 'fog-aws'
   gem 'dotenv-rails'
