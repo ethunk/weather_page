@@ -11,7 +11,12 @@ gem 'kaminari'
 gem 'foundation-rails'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'rest-client'
+gem 'json'
 gem 'activerecord'
+# gem 'geonames-api-client', require: 'geonames', github: 'teoulas/ruby-geonames-api-client'
+gem 'geonames_api', github: 'frausto/geonames_api'
+gem 'open-weather-api'
 
 group :development do
   gem 'listen'
@@ -33,6 +38,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'fog-aws'
   gem 'dotenv-rails'
+  gem 'rack'
 end
 
 group :production do
