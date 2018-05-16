@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :zipcode do
+  factory :user_weather_location do
     
   end
 end

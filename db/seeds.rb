@@ -36,4 +36,4 @@ CurrentWeather.create(  coord: {"lon"=>-85.14, "lat"=>41.08},
   visibility: "16093",
   sys: {"type"=>1, "id"=>1023, "message"=>0.0051, "country"=>"US", "sunrise"=>1526207017, "sunset"=>1526259047})
 
-data = UserWeatherLocation.new(user_id: 2, city_id: 4920423)
+data = UserWeatherLocation.new(user_id: 2, current_weather_id: 4920423)

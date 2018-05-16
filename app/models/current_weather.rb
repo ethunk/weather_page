@@ -10,6 +10,22 @@ class CurrentWeather < ApplicationRecord
     self.new_from_city(city).save
   end
 
+  def uptodate?
+    binding.pry
+    if Time.now - Time.at((self.dt)) < (3600)
+      return true
+    else
+      return false
+    end
+  end
+
+  def uptodate
+    if !uptodate?
+      binding.pry
+      self.update($open_weather_api.current(id: self.city_id))
+    end
+  end
+
   has_many :user_weather_locations
   has_many :users, through: :user_weather_locations, source: :city_id
 

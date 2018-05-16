@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180513190630) do
     t.json "clouds"
     t.json "rain"
     t.json "snow"
-    t.string "dt"
+    t.integer "dt"
     t.integer "id", null: false
     t.string "name"
     t.string "cod"

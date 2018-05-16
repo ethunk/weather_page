@@ -9,7 +9,7 @@ class CreateCurrentWeathers < ActiveRecord::Migration[5.1]
       t.json :clouds
       t.json :rain
       t.json :snow
-      t.string :dt
+      t.integer :dt
       t.integer :id, null: false, index: {unique: true}
       t.string :name
       t.string :cod
