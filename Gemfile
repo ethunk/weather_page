@@ -39,6 +39,7 @@ group :development, :test do
   gem 'fog-aws'
   gem 'dotenv-rails'
   gem 'rack'
+  gem 'database_cleaner'
 end
 
 group :production do
