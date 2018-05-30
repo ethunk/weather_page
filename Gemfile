@@ -17,6 +17,7 @@ gem 'activerecord'
 # gem 'geonames-api-client', require: 'geonames', github: 'teoulas/ruby-geonames-api-client'
 gem 'geonames_api', github: 'frausto/geonames_api'
 gem 'open-weather-api'
+gem 'open-weather'
 
 group :development do
   gem 'listen'

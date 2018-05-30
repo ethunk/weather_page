@@ -6,5 +6,5 @@ $open_weather_api = OpenWeatherAPI.configure do |config|
   # Optionals
   config.default_language = 'en'     # 'en' by default
   config.default_country_code = 'us' # nil by default (ISO 3166-1 alfa2)
-  config.default_units = 'imperial'    # 'metric' by default
+  config.default_units = 'metric'    # 'metric' by default
 end
