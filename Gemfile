@@ -19,6 +19,7 @@ gem 'geonames_api', github: 'frausto/geonames_api'
 gem 'open-weather-api'
 gem 'open-weather'
 
+
 group :development do
   gem 'listen'
   gem 'web-console'
@@ -40,6 +41,7 @@ group :development, :test do
   gem 'fog-aws'
   gem 'dotenv-rails'
   gem 'rack'
+  gem 'database_cleaner'
 end
 
 group :production do

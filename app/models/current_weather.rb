@@ -1,13 +1,17 @@
 class CurrentWeather < ApplicationRecord
   alias_attribute :city_id, :id
   self.primary_key = "id"
-  def self.new_from_city(city)
-    weather = $open_weather_api.current(city: city)
+
+  has_many :user_weather_locations
+  has_many :users, through: :user_weather_locations, source: :city_id
+
+  def self.new_from_zip(zip)
+    weather = $open_weather_api.current(zip: zip)
     self.new(weather)
   end
 
-  def self.create_from_city(city)
-    self.new_from_city(city).save
+  def self.create_from_zip(zip)
+    self.new_from_zip(zip).save
   end
 
   def uptodate?
@@ -21,12 +25,9 @@ class CurrentWeather < ApplicationRecord
 
   def uptodate
     if !uptodate?
-      binding.pry
       self.update($open_weather_api.current(id: self.city_id))
     end
   end
 
-  has_many :user_weather_locations
-  has_many :users, through: :user_weather_locations, source: :city_id
 
 end

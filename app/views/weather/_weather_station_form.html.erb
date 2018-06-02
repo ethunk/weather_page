@@ -1,0 +1,8 @@
+
+<div class = 'container'>
+  <%= form_tag("../weather", method: "post") do %>
+    <%= label_tag(:zipcode, "Enter Zipcode:") %>
+    <%= text_field_tag(:zipcode) %>
+    <%= submit_tag("Add Location") %>
+  <% end %>
+</div>
