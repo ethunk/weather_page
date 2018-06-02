@@ -23,11 +23,11 @@ end
 
   it "allows user to add a location" do
     login
-    click_link 'Add Location'
+    click_link 'Add Weather Station'
     #fill in form
   end
 
   it 'gives errors when add location fails' do
-    
+
   end
 end

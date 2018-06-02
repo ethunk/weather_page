@@ -18,6 +18,7 @@ gem 'activerecord'
 gem 'geonames_api', github: 'frausto/geonames_api'
 gem 'open-weather-api'
 
+
 group :development do
   gem 'listen'
   gem 'web-console'
