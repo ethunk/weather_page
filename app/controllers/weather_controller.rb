@@ -17,6 +17,7 @@ class WeatherController < ApplicationController
       redirect_to new_weather_path
     else
       new_current_weather.save
+      UserWeatherLocation.create({user_id: current_user.id, current_weather_id: new_current_weather.id})
       flash[:notice] = "Location Sucessfully Added"
       redirect_to weather_index_path
     end

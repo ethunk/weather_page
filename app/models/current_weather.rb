@@ -29,5 +29,28 @@ class CurrentWeather < ApplicationRecord
     end
   end
 
+  def current_temp
+    return (('%.f' % (self.main["temp"]*9/5-459.67))+'°F')
+  end
+
+  def low_temp
+    return (('%.f' % (self.main["temp_min"]*9/5-459.67))+'°F')
+  end
+
+  def high_temp
+    return (('%.f' % (self.main["temp_max"]*9/5-459.67))+'°F')
+  end
+
+  def description
+    description = ""
+    self.weather.each do |info|
+      description << info["description"]
+    end
+    return description
+  end
+
+  def weather_icon
+    $open_weather_api.icon_url(self['weather'].first['icon'])
+  end
 
 end
