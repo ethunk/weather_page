@@ -2,3 +2,7 @@
 <div class='box-grid'>
   <p><%= link_to "Add Weather Station", new_weather_path, :id => 'submit_link', :class => 'button' %></p>
 </div>
+
+<div>
+    <%= render partial: 'current_weather_box', :locals => { :weathers => @current_weathers } %>
+</div>

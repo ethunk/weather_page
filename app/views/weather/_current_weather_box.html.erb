@@ -1,0 +1,10 @@
+<% weathers.each do |weather| %>
+  <div class='box'>
+    <h4> <%= weather.name %> </h4>
+    <img src="<%=weather.weather_icon%>">
+    <h10> <%= weather.description %> </h10>
+    <h5 class='temp'> <%= weather.current_temp %> </h5>
+    <h9> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </h9>
+    <br>
+  </div>
+<% end %>
