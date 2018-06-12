@@ -1,10 +1,17 @@
-<% weathers.each do |weather| %>
-  <div class='box'>
-    <h4> <%= weather.name %> </h4>
-    <img src="<%=weather.weather_icon%>">
-    <h10> <%= weather.description %> </h10>
-    <h5 class='temp'> <%= weather.current_temp %> </h5>
-    <h9> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </h9>
-    <br>
-  </div>
-<% end %>
+<div class='row expand-column-wrapper'>
+  <% weathers.each do |weather| %>
+    <div class="column">
+      <!-- <div class="expand-column-content"> -->
+        <tbody class="expand-column-content">
+          <tr class="weather-name"> <%= weather.name %> </tr>
+          <tr class="weather-icon"><img src="<%=weather.weather_icon%>"></tr>
+          <tr> <%= weather.description %> </tr>
+          <tr class='temp'> <%= weather.current_temp %> </tr>
+          <tr> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </tr>
+        <br>
+      </tbody>
+      <!-- </div> -->
+    </div>
+  <% end %>
+
+</div>
