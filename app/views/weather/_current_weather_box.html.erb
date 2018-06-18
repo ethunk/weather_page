@@ -1,4 +1,4 @@
-<div class='row expand-column-wrapper'>
+<!-- <div class='row expand-column-wrapper'>
   <% weathers.each do |weather| %>
     <div class="row column large-3">
       <div> <%= weather.name %> </div>
@@ -7,6 +7,22 @@
       <div> <%= weather.current_temp %> </div>
       <div> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </div>
     </div>
+  <% end %>
+
+</div> -->
+
+
+<div class='grid-x text-center'>
+  <% weathers.each do |weather| %>
+  <div class="card">
+    <div class="cell">
+      <div class="card-divider text-center"> <%= weather.name %> </div>
+      <div class="card-section text-center"><img src="<%=weather.weather_icon%>"></div>
+      <div class=> <%= weather.description %> </div>
+      <div> <%= weather.current_temp %> </div>
+      <div> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </div>
+    </div>
+  </div>
   <% end %>
 
 </div>
