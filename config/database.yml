@@ -83,3 +83,4 @@ production:
   database: weather_page_production
   username: weather_page
   password: <%= ENV['WEATHER_PAGE_DATABASE_PASSWORD'] %>
+  title: "Simple Weather"
