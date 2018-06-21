@@ -10,20 +10,12 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-
-  <nav class="top-bar right">
-    <section class="top-bar-section">
-      <ul>
         <%- if current_user -%>
-          <li class="button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <p><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></p>
         <%- end -%>
           <!-- <li>%= link_to 'Sign Up', new_user_registration_path %></li>
           <li>%= link_to 'Sign In', new_user_session_path %></li> -->
         <!-- %- end -%> -->
-      </ul>
-    </section>
-  </nav>
-
   <p class="notice warning" data-closeable><%= notice %></p>
   <p class="notice warning" data-closeable><%= alert %></p>
 

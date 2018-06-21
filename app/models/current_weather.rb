@@ -15,7 +15,6 @@ class CurrentWeather < ApplicationRecord
   end
 
   def uptodate?
-    binding.pry
     if Time.now - Time.at((self.dt)) < (3600)
       return true
     else
@@ -25,8 +24,18 @@ class CurrentWeather < ApplicationRecord
 
   def uptodate
     if !uptodate?
-      self.update($open_weather_api.current(id: self.city_id))
+      return self.update($open_weather_api.current(id: self.city_id))
+    else
+      return self
     end
+  end
+
+  def self.uptodate(current_weathers)
+    output = []
+    current_weathers.each do |current_weather|
+      output << current_weather.uptodate
+    end
+    return output
   end
 
   def current_temp

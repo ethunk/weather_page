@@ -3,7 +3,7 @@ class WeatherController < ApplicationController
 
   def index
     @user = current_user
-    @current_weathers = @user.current_weathers
+    @current_weathers = CurrentWeather.uptodate(@user.current_weathers)
   end
 
   def create

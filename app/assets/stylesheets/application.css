@@ -16,6 +16,22 @@
 
  */
 
+.centered {
+  text-align: center;
+}
+
+.card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.weather-name {
+  display: inherit;
+}
+
+.button {
+  color: white;
+}
 
 
  .expand-column-wrapper {

@@ -12,17 +12,19 @@
 </div> -->
 
 
-<div class='grid-x text-center'>
+<div class="grid-container">
+  <div class="grid-x grid-padding-x small-up-2 medium-up-3">
   <% weathers.each do |weather| %>
-  <div class="card">
-    <div class="cell">
-      <div class="card-divider text-center"> <%= weather.name %> </div>
-      <div class="card-section text-center"><img src="<%=weather.weather_icon%>"></div>
-      <div class=> <%= weather.description %> </div>
-      <div> <%= weather.current_temp %> </div>
-      <div> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </div>
+    <div class="card">
+      <div class="cell">
+        <div class="card-divider text-center weather-name"> <%= weather.name %> </div>
+        <div class="card-section text-center"><img src="<%=weather.weather_icon%>"></div>
+        <div class="centered"> <%= weather.description %> </div>
+        <div class="centered"> <%= weather.current_temp %> </div>
+        <div class="centered"> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </div>
+        <div class="centered end"> <%= weather.updated_at.strftime("%m/%d/%Y %I:%M%p") %> </div>
+      </div>
     </div>
-  </div>
   <% end %>
-
+  </div>
 </div>
