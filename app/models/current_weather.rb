@@ -50,6 +50,11 @@ class CurrentWeather < ApplicationRecord
     return (('%.f' % (self.main["temp_max"]*9/5-459.67))+'°F')
   end
 
+  def timestamp
+    return self.updated_at.localtime.strftime("%m/%d/%Y %I:%M%p")
+  end
+
+
   def description
     description = ""
     self.weather.each do |info|

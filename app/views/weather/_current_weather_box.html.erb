@@ -22,7 +22,7 @@
         <div class="centered"> <%= weather.description %> </div>
         <div class="centered"> <%= weather.current_temp %> </div>
         <div class="centered"> High: <%= weather.high_temp %> Low: <%= weather.low_temp %> </div>
-        <div class="centered end"> <%= weather.updated_at.strftime("%m/%d/%Y %I:%M%p") %> </div>
+        <div class="centered end"> <%= weather.timestamp %> </div>
       </div>
     </div>
   <% end %>
